@@ -12,10 +12,7 @@ import restx.annotations.RestxResource;
 import restx.factory.Component;
 import restx.security.PermitAll;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Pattern;
 
 import static java.lang.Math.sqrt;
@@ -72,7 +69,7 @@ public class UserResource {
         Optional<User> user1 = database.findUserById(userIdA);
         Optional<User> user2 = database.findUserById(userIdB);
 
-        Set<Movie> movies = new HashSet<Movie>();
+        SortedSet<Movie> movies = new TreeSet<>();
         if(user1.isPresent() && user2.isPresent()) {
             Set<Integer> movieIds = user1.get().getRatesByMovieId().keySet();
             movieIds.retainAll(user2.get().getRatesByMovieId().keySet());
