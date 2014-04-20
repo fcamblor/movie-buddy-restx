@@ -41,6 +41,13 @@ public class AppModule {
     }
 
     @Provides
+    public CORSAuthorizer allowCrossOrigins() {
+        return new StdCORSAuthorizer(
+                Predicates.<CharSequence>alwaysTrue(),
+                Predicates.<CharSequence>alwaysTrue(), asList("GET", "POST"));
+    }
+
+    @Provides
     public BasicPrincipalAuthenticator basicPrincipalAuthenticator(
             SecuritySettings securitySettings, CredentialsStrategy credentialsStrategy,
             @Named("restx.admin.passwordHash") String defaultAdminPasswordHash, ObjectMapper mapper) {
