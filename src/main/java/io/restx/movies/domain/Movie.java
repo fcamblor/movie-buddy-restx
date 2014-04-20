@@ -1,14 +1,12 @@
 package io.restx.movies.domain;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.TreeNode;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.node.IntNode;
 
 import java.io.IOException;
 
@@ -20,25 +18,17 @@ public class Movie implements Comparable<Movie> {
     final String title;
     final String actors;
     final String genre;
-    @JsonIgnore
-    final String json;
 
-    public Movie(int _id, String title, String actors, String genre, String json) {
+    public Movie(int _id, String title, String actors, String genre) {
         this._id = _id;
         this.title = title;
         this.actors = actors;
         this.genre = genre;
-        this.json = json;
     }
 
     @Override
     public int compareTo(Movie movie) {
         return compare(_id, movie._id);
-    }
-
-    @Override
-    public String toString() {
-        return json;
     }
 
     public int getId() {
@@ -67,8 +57,7 @@ public class Movie implements Comparable<Movie> {
                     ((JsonNode)node.get("_id")).numberValue().intValue(),
                     ((JsonNode)node.get("Title")).asText(),
                     ((JsonNode)node.get("Actors")).asText(),
-                    ((JsonNode)node.get("Genre")).asText(),
-                    node.toString()
+                    ((JsonNode)node.get("Genre")).asText()
             );
         }
     }

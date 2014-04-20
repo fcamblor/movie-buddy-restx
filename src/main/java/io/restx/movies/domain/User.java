@@ -18,25 +18,17 @@ import static java.lang.Integer.compare;
 public class User implements Comparable<User> {
     final int _id;
     final String name;
-    @JsonIgnore
-    final String json;
     HashMap<Integer, Integer> ratesByMovieId;
 
-    public User(int _id, String name, String json) {
+    public User(int _id, String name) {
         this._id = _id;
         this.name = name;
-        this.json = json;
         this.ratesByMovieId = new HashMap<>();
     }
 
     @Override
     public int compareTo(User user) {
         return compare(_id, user._id);
-    }
-
-    @Override
-    public String toString() {
-        return json;
     }
 
     public int getId() {
@@ -59,8 +51,7 @@ public class User implements Comparable<User> {
             TreeNode node = jsonParser.getCodec().readTree(jsonParser);
             return new User(
                 ((JsonNode)node.get("_id")).numberValue().intValue(),
-                ((JsonNode)node.get("name")).asText(),
-                node.toString()
+                ((JsonNode)node.get("name")).asText()
             );
         }
     }

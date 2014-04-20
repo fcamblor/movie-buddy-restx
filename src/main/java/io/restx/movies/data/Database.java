@@ -95,12 +95,12 @@ public class Database implements AutoStartable {
     }
 
     public Optional<Movie> findMovieById(int id) {
-        int index = binarySearch(movies, new Movie(id, "", "", "", ""));
+        int index = binarySearch(movies, new Movie(id, "", "", ""));
         return fromNullable((index < 0) ? null : movies.get(index));
     }
 
     public Optional<User> findUserById(int id) {
-        int index = binarySearch(users, new User(id, "", ""));
+        int index = binarySearch(users, new User(id, ""));
         return fromNullable((index < 0) ? null : users.get(index));
     }
 
