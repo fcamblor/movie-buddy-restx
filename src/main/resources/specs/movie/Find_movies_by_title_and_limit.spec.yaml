@@ -1,0 +1,13 @@
+title: Find movies by title and limit
+given:
+  - time: 2014-04-20T16:59:54.140+02:00
+wts:
+  - when: |
+       GET movies/search/title/Advocate/1
+    then: |
+        [ {
+          "title" : "Advocate",
+          "actors" : "Andrea Werhun, Cynthia Crofoot, Steven L. Bird, Kate Stephen",
+          "genre" : "Drama",
+          "id" : 30
+        } ]

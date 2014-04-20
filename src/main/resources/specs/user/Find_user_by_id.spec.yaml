@@ -1,0 +1,11 @@
+title: Find user by id
+given:
+  - time: 2014-04-20T17:03:56.966+02:00
+wts:
+  - when: |
+       GET users/10
+    then: |
+        {
+          "name" : "Candido Torphy",
+          "id" : 10
+        }

@@ -1,0 +1,14 @@
+title: Find users by name
+given:
+  - time: 2014-04-20T17:04:44.994+02:00
+wts:
+  - when: |
+       GET users/search/Pierre/2
+    then: |
+        [ {
+          "name" : "Pierre Lueilwitz",
+          "id" : 14
+        }, {
+          "name" : "Pierre Stanton",
+          "id" : 3280
+        } ]

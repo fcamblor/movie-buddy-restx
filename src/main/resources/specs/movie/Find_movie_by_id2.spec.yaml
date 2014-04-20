@@ -1,0 +1,13 @@
+title: Find movie by id2
+given:
+  - time: 2014-04-20T16:48:48.461+02:00
+wts:
+  - when: |
+       GET movies/200
+    then: |
+        {
+          "title" : "Abject Guilt",
+          "actors" : "Jeanette Boras, Derek Moses, Jacqueline Moses, Laura Moses",
+          "genre" : "Short, Drama",
+          "id" : 200
+        }

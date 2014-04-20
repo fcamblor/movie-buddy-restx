@@ -1,0 +1,28 @@
+title: Shared movies between users
+given:
+  - time: 2014-04-20T17:02:58.295+02:00
+wts:
+  - when: |
+       GET users/share/3022/9649
+    then: |
+        [ {
+          "title" : "Acolytes",
+          "actors" : "Joel Edgerton, Michael Dorman, Sebastian Gregory, Hanna Mangan Lawrence",
+          "genre" : "Crime, Drama, Horror",
+          "id" : 24
+        }, {
+          "title" : "Adjourned (a.k.a. Cheers)",
+          "actors" : "Michael Badalucco, Steve Harris, Camryn Manheim, Jessica Capshaw",
+          "genre" : "Crime, Drama, Mystery",
+          "id" : 302
+        }, {
+          "title" : "Mutual Admiration Society",
+          "actors" : "Keith Thomas Brown, Sean Kevin Sweeney, John Joyce, Brian Allen",
+          "genre" : "Comedy, Drama",
+          "id" : 482
+        }, {
+          "title" : "Adjustment",
+          "actors" : "Matthew Lyon, Simon Perry, Sally Scott",
+          "genre" : "Animation, Short, Drama",
+          "id" : 772
+        } ]

@@ -1,0 +1,18 @@
+title: Find movies by actor and limit
+given:
+  - time: 2014-04-20T17:01:44.697+02:00
+wts:
+  - when: |
+       GET movies/search/actors/Burton/2
+    then: |
+        [ {
+          "title" : "Who's Afraid of Virginia Woolf?",
+          "actors" : "Elizabeth Taylor, Richard Burton, George Segal, Sandy Dennis",
+          "genre" : "Drama",
+          "id" : 40
+        }, {
+          "title" : "Yorkshire: The Northern Abbeys",
+          "actors" : "Dan Snow, Janet Burton, Abby Hunt, Alastair Oswald",
+          "genre" : "Documentary",
+          "id" : 250
+        } ]

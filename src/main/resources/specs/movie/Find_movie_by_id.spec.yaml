@@ -1,0 +1,13 @@
+title: Find movie by id
+given:
+  - time: 2014-04-20T16:48:41.381+02:00
+wts:
+  - when: |
+       GET movies/10
+    then: |
+        {
+          "title" : "Acquaintance",
+          "actors" : "Neil Ausburn, Robert Hatch",
+          "genre" : "Short, Drama",
+          "id" : 10
+        }

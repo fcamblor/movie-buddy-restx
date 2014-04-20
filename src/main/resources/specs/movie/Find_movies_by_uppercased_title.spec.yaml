@@ -1,0 +1,18 @@
+title: Find movies by uppercased title
+given:
+  - time: 2014-04-20T16:59:40.945+02:00
+wts:
+  - when: |
+       GET movies/search/title/ADVOCATE/10
+    then: |
+        [ {
+          "title" : "Advocate",
+          "actors" : "Andrea Werhun, Cynthia Crofoot, Steven L. Bird, Kate Stephen",
+          "genre" : "Drama",
+          "id" : 30
+        }, {
+          "title" : "Advocates II",
+          "actors" : "Jonathan Battersby, Isla Blair, Robert Carlyle, James Fleet",
+          "genre" : "Crime, Drama",
+          "id" : 786
+        } ]

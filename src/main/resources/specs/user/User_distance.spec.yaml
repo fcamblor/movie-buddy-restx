@@ -1,0 +1,8 @@
+title: User distance
+given:
+  - time: 2014-04-20T17:05:50.012+02:00
+wts:
+  - when: |
+       GET users/distance/3022/9649
+    then: |
+        0.12973190755680383

@@ -1,0 +1,14 @@
+title: Find rates by user
+given:
+  - time: 2014-04-20T17:06:04.531+02:00
+wts:
+  - when: |
+       GET rates/3022
+    then: |
+        {
+          "772" : 2,
+          "680" : 6,
+          "24" : 10,
+          "302" : 7,
+          "482" : 4
+        }

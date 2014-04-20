@@ -1,0 +1,58 @@
+title: Find movies by exact genre
+given:
+  - time: 2014-04-20T17:02:02.973+02:00
+wts:
+  - when: |
+       GET movies/search/genre/Documentary/10
+    then: |
+        [ {
+          "title" : "Adorno",
+          "actors" : "Theodor W. Adorno, Gert Heidenreich",
+          "genre" : "Documentary",
+          "id" : 1
+        }, {
+          "title" : "Adders",
+          "actors" : "Bill Bailey, Dusty Gedge, Sasha Norris, Jem Stansfield",
+          "genre" : "Documentary",
+          "id" : 4
+        }, {
+          "title" : "'Africander' Winning the Suburban Handicap, 1903",
+          "actors" : "N/A",
+          "genre" : "Documentary, Short",
+          "id" : 13
+        }, {
+          "title" : "Amsterdam Afterbeat",
+          "actors" : "N/A",
+          "genre" : "Documentary",
+          "id" : 14
+        }, {
+          "title" : "Aceh",
+          "actors" : "Jonathan Miller",
+          "genre" : "Documentary",
+          "id" : 16
+        }, {
+          "title" : "Homo-Actualities",
+          "actors" : "Roger Peyrefitte",
+          "genre" : "Documentary, Short, News",
+          "id" : 20
+        }, {
+          "title" : "Abdou Diouf, un destin francophone",
+          "actors" : "Abdou Diouf, Annick Cojean",
+          "genre" : "Documentary",
+          "id" : 55
+        }, {
+          "title" : "Abaca, Its Culture and Use in the Philippines",
+          "actors" : "N/A",
+          "genre" : "Documentary, Short",
+          "id" : 57
+        }, {
+          "title" : "Aerodrome",
+          "actors" : "Michael Power",
+          "genre" : "Documentary, Short, Romance",
+          "id" : 69
+        }, {
+          "title" : "Activists",
+          "actors" : "N/A",
+          "genre" : "Documentary",
+          "id" : 74
+        } ]

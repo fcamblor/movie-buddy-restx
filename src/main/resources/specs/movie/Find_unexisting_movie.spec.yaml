@@ -1,0 +1,12 @@
+title: Find unexisting movie
+given:
+  - time: 2014-04-20T16:48:51.907+02:00
+wts:
+  - when: |
+       GET movies/1000
+    then: |
+       404
+
+       Route matched, but resource /movies/1000 not found.
+       Matched route: GET /movies/:id => default#MovieResource#findMovieById
+
